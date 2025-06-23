@@ -1,18 +1,1541 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vedic Wisdom School - Excellence in Education with Indian Values</title>
-    <meta name="description" content="Premier educational institution combining ancient Vedic wisdom with modern learning. Nurturing young minds for holistic development and character building." />
-    <meta name="keywords" content="vedic school, indian education, holistic learning, character building, traditional values, modern education" />
+    <meta name="description" content="Premier educational institution combining ancient Vedic wisdom with modern learning. Nurturing young minds for holistic development and character building.">
+    <meta name="keywords" content="vedic school, indian education, holistic learning, character building, traditional values, modern education">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        'serif': ['Crimson Text', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="bg-orange-600 text-white py-2 text-sm">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="phone" class="h-4 w-4"></i>
+                    <span>+91 98765 43210</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="mail" class="h-4 w-4"></i>
+                    <span>info@vedicschool.edu</span>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <span>Admissions Open for 2025-26 | Apply Now</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header id="header" class="fixed w-full z-50 transition-all duration-300 bg-white">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+                        <i data-lucide="graduation-cap" class="h-7 w-7 text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">Vedic Wisdom School</h1>
+                        <p class="text-xs text-gray-600">विद्या ददाति विनयम्</p>
+                    </div>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="font-medium text-gray-700 hover:text-orange-600 transition-colors duration-300">Home</a>
+                    <a href="#about" class="font-medium text-gray-700 hover:text-orange-600 transition-colors duration-300">About</a>
+                    <a href="#academics" class="font-medium text-gray-700 hover:text-orange-600 transition-colors duration-300">Academics</a>
+                    <a href="#admissions" class="font-medium text-gray-700 hover:text-orange-600 transition-colors duration-300">Admissions</a>
+                    <a href="#faculty" class="font-medium text-gray-700 hover:text-orange-600 transition-colors duration-300">Faculty</a>
+                    <a href="#campus" class="font-medium text-gray-700 hover:text-orange-600 transition-colors duration-300">Campus</a>
+                    <a href="#events" class="font-medium text-gray-700 hover:text-orange-600 transition-colors duration-300">Events</a>
+                    <a href="#contact" class="font-medium text-gray-700 hover:text-orange-600 transition-colors duration-300">Contact</a>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-800">
+                    <i data-lucide="menu" class="h-6 w-6"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t hidden">
+                <a href="#home" class="block px-6 py-3 text-gray-800 hover:bg-orange-50 hover:text-orange-600 border-b border-gray-100">Home</a>
+                <a href="#about" class="block px-6 py-3 text-gray-800 hover:bg-orange-50 hover:text-orange-600 border-b border-gray-100">About</a>
+                <a href="#academics" class="block px-6 py-3 text-gray-800 hover:bg-orange-50 hover:text-orange-600 border-b border-gray-100">Academics</a>
+                <a href="#admissions" class="block px-6 py-3 text-gray-800 hover:bg-orange-50 hover:text-orange-600 border-b border-gray-100">Admissions</a>
+                <a href="#faculty" class="block px-6 py-3 text-gray-800 hover:bg-orange-50 hover:text-orange-600 border-b border-gray-100">Faculty</a>
+                <a href="#campus" class="block px-6 py-3 text-gray-800 hover:bg-orange-50 hover:text-orange-600 border-b border-gray-100">Campus</a>
+                <a href="#events" class="block px-6 py-3 text-gray-800 hover:bg-orange-50 hover:text-orange-600 border-b border-gray-100">Events</a>
+                <a href="#contact" class="block px-6 py-3 text-gray-800 hover:bg-orange-50 hover:text-orange-600 border-b border-gray-100">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen relative overflow-hidden pt-24">
+        <div class="absolute inset-0 bg-gradient-to-br from-orange-50 via-amber-50 to-red-50">
+            <div class="absolute inset-0 bg-white/60"></div>
+        </div>
+        
+        <div class="absolute inset-0 opacity-20" style="background-image: url('https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1920'); background-size: cover; background-position: center;"></div>
+
+        <div class="relative container mx-auto px-6 min-h-screen flex items-center">
+            <div class="grid lg:grid-cols-2 gap-12 items-center w-full">
+                <div>
+                    <div class="mb-6">
+                        <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-800 leading-tight font-serif">
+                            <span class="text-orange-600">Vedic Wisdom</span><br>
+                            School
+                        </h1>
+                        <div class="text-2xl text-gray-600 mb-4">
+                            विद्या ददाति विनयम्
+                        </div>
+                        <p class="text-lg text-gray-700 font-medium">
+                            Knowledge bestows humility
+                        </p>
+                    </div>
+                    
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Nurturing young minds with ancient wisdom and modern education. 
+                        Where traditional values meet contemporary learning for holistic development.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <a href="#admissions" class="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-center">
+                            Apply for Admission
+                        </a>
+                        <a href="#about" class="px-8 py-4 bg-transparent border-2 border-orange-600 hover:bg-orange-600 hover:text-white text-orange-600 font-semibold rounded-full transition-all duration-300 text-center">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i data-lucide="award" class="h-6 w-6 text-orange-600"></i>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-800">25+</div>
+                            <div class="text-sm text-gray-600">Years Excellence</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i data-lucide="users" class="h-6 w-6 text-orange-600"></i>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-800">2000+</div>
+                            <div class="text-sm text-gray-600">Happy Students</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i data-lucide="book-open" class="h-6 w-6 text-orange-600"></i>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-800">100%</div>
+                            <div class="text-sm text-gray-600">Success Rate</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="relative z-10">
+                        <img src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Students learning" class="rounded-2xl shadow-2xl">
+                    </div>
+                    <div class="absolute -top-6 -right-6 w-full h-full bg-gradient-to-r from-orange-200 to-red-200 rounded-2xl -z-10"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="text-orange-600 h-8 w-8"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-serif">
+                    About Our School
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Rooted in ancient wisdom, reaching for modern excellence
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6 font-serif">Our Philosophy</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        At Vedic Wisdom School, we believe that true education encompasses not just academic excellence 
+                        but the holistic development of mind, body, and spirit. Our curriculum seamlessly integrates 
+                        time-tested Vedic principles with contemporary educational methodologies.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        We nurture students to become compassionate leaders, critical thinkers, and responsible 
+                        global citizens who honor their cultural heritage while embracing innovation and progress.
+                    </p>
+                    
+                    <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
+                        <blockquote class="text-lg text-gray-700 italic mb-2">
+                            "गुरुर्ब्रह्मा गुरुर्विष्णुः गुरुर्देवो महेश्वरः"
+                        </blockquote>
+                        <p class="text-sm text-gray-600">
+                            The teacher is Brahma, Vishnu, and Shiva - the creator, sustainer, and transformer of knowledge
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/8613264/pexels-photo-8613264.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Traditional learning" class="rounded-2xl shadow-lg">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center group hover:transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="heart" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Compassion</h4>
+                    <p class="text-2xl text-orange-600 mb-3">करुणा</p>
+                    <p class="text-gray-600 text-sm">Fostering empathy and kindness in every interaction</p>
+                </div>
+                <div class="text-center group hover:transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="target" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Discipline</h4>
+                    <p class="text-2xl text-orange-600 mb-3">अनुशासन</p>
+                    <p class="text-gray-600 text-sm">Building character through structured learning</p>
+                </div>
+                <div class="text-center group hover:transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="eye" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Wisdom</h4>
+                    <p class="text-2xl text-orange-600 mb-3">ज्ञान</p>
+                    <p class="text-gray-600 text-sm">Seeking knowledge beyond textbooks</p>
+                </div>
+                <div class="text-center group hover:transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="lightbulb" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Innovation</h4>
+                    <p class="text-2xl text-orange-600 mb-3">नवाचार</p>
+                    <p class="text-gray-600 text-sm">Blending tradition with modern thinking</p>
+                </div>
+            </div>
+
+            <div class="mt-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white text-center">
+                <h3 class="text-3xl font-bold mb-4 font-serif">Our Mission</h3>
+                <p class="text-xl leading-relaxed max-w-4xl mx-auto">
+                    To create an educational environment where ancient wisdom illuminates modern learning, 
+                    where every student discovers their unique potential, and where character development 
+                    goes hand in hand with academic achievement.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-serif">
+                    Academic Excellence
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive curriculum blending traditional wisdom with modern education
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="book-open" class="h-6 w-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Sanskrit & Literature</h3>
+                    <p class="text-gray-600 mb-4">Deep study of ancient texts, poetry, and classical literature</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Sanskrit Grammar
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Vedic Literature
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Classical Poetry
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Philosophy
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="calculator" class="h-6 w-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Mathematics & Sciences</h3>
+                    <p class="text-gray-600 mb-4">Modern STEM education with logical reasoning emphasis</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Advanced Mathematics
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Physics
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Chemistry
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Biology
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="globe" class="h-6 w-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Social Sciences</h3>
+                    <p class="text-gray-600 mb-4">Understanding society through historical and cultural lens</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Indian History
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Geography
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Civics
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Economics
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="palette" class="h-6 w-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Arts & Crafts</h3>
+                    <p class="text-gray-600 mb-4">Creative expression through traditional and modern arts</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Classical Dance
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Painting
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Sculpture
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Handicrafts
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="music" class="h-6 w-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Music & Performance</h3>
+                    <p class="text-gray-600 mb-4">Classical and contemporary music education</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Vocal Music
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Instrumental
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Drama
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Public Speaking
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="dumbbell" class="h-6 w-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Physical Education</h3>
+                    <p class="text-gray-600 mb-4">Holistic physical development and sports</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Yoga
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Traditional Games
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Modern Sports
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            Martial Arts
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center font-serif">Grade Structure</h3>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-xl border border-orange-100">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Pre-Primary</h4>
+                        <p class="text-orange-600 font-medium mb-3">3-5 years</p>
+                        <p class="text-gray-600 text-sm">Play-based learning with moral stories</p>
+                    </div>
+                    <div class="text-center p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-xl border border-orange-100">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Primary</h4>
+                        <p class="text-orange-600 font-medium mb-3">6-10 years</p>
+                        <p class="text-gray-600 text-sm">Foundation building with value education</p>
+                    </div>
+                    <div class="text-center p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-xl border border-orange-100">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Middle School</h4>
+                        <p class="text-orange-600 font-medium mb-3">11-13 years</p>
+                        <p class="text-gray-600 text-sm">Conceptual learning with practical application</p>
+                    </div>
+                    <div class="text-center p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-xl border border-orange-100">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">High School</h4>
+                        <p class="text-orange-600 font-medium mb-3">14-18 years</p>
+                        <p class="text-gray-600 text-sm">Specialized streams with career guidance</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <div class="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4 font-serif">Special Features</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2">Gurukul System</h4>
+                            <p class="text-orange-100 text-sm">Personalized mentorship and guidance</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2">Value Education</h4>
+                            <p class="text-orange-100 text-sm">Character building through daily practices</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2">Practical Learning</h4>
+                            <p class="text-orange-100 text-sm">Hands-on experience and real-world application</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-serif">
+                    Admissions 2025-26
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Join our family of learners and embark on a journey of holistic education
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 mb-20">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-8 font-serif">Admission Process</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold">
+                                    1
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Application Form</h4>
+                                <p class="text-gray-600">Submit online application with required documents</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold">
+                                    2
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Interaction Session</h4>
+                                <p class="text-gray-600">Parent-child interaction with our admission team</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold">
+                                    3
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Assessment</h4>
+                                <p class="text-gray-600">Age-appropriate evaluation for academic readiness</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold">
+                                    4
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Admission Confirmation</h4>
+                                <p class="text-gray-600">Fee payment and seat confirmation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-6 bg-orange-50 rounded-xl border-l-4 border-orange-500">
+                        <h4 class="font-semibold text-gray-800 mb-3">Important Dates</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>Application Opens:</span>
+                                <span class="font-medium">December 1, 2024</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Last Date to Apply:</span>
+                                <span class="font-medium">February 28, 2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Admission Results:</span>
+                                <span class="font-medium">March 15, 2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Session Begins:</span>
+                                <span class="font-medium">April 1, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-8 font-serif">Required Documents</h3>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6 mb-8">
+                        <ul class="space-y-3">
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="h-5 w-5 text-green-500 flex-shrink-0"></i>
+                                <span class="text-gray-700">Birth Certificate</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="h-5 w-5 text-green-500 flex-shrink-0"></i>
+                                <span class="text-gray-700">Previous School Records (if applicable)</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="h-5 w-5 text-green-500 flex-shrink-0"></i>
+                                <span class="text-gray-700">Medical Certificate</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="h-5 w-5 text-green-500 flex-shrink-0"></i>
+                                <span class="text-gray-700">Passport Size Photographs</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="h-5 w-5 text-green-500 flex-shrink-0"></i>
+                                <span class="text-gray-700">Address Proof</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="h-5 w-5 text-green-500 flex-shrink-0"></i>
+                                <span class="text-gray-700">Parent ID Proof</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            Download Application Form
+                        </button>
+                        <p class="text-sm text-gray-600 mt-3">
+                            Or apply online through our admission portal
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-2xl p-8">
+                <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center font-serif">Fee Structure</h3>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b-2 border-orange-200">
+                                <th class="text-left py-4 px-6 font-semibold text-gray-800">Grade Level</th>
+                                <th class="text-center py-4 px-6 font-semibold text-gray-800">Admission Fee</th>
+                                <th class="text-center py-4 px-6 font-semibold text-gray-800">Annual Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-200 hover:bg-white transition-colors">
+                                <td class="py-4 px-6 text-gray-700">Pre-Primary (Nursery-UKG)</td>
+                                <td class="py-4 px-6 text-center font-medium text-orange-600">₹25,000</td>
+                                <td class="py-4 px-6 text-center font-medium text-orange-600">₹1,20,000</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-white transition-colors">
+                                <td class="py-4 px-6 text-gray-700">Primary (Class I-V)</td>
+                                <td class="py-4 px-6 text-center font-medium text-orange-600">₹30,000</td>
+                                <td class="py-4 px-6 text-center font-medium text-orange-600">₹1,50,000</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-white transition-colors">
+                                <td class="py-4 px-6 text-gray-700">Middle School (Class VI-VIII)</td>
+                                <td class="py-4 px-6 text-center font-medium text-orange-600">₹35,000</td>
+                                <td class="py-4 px-6 text-center font-medium text-orange-600">₹1,80,000</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-white transition-colors">
+                                <td class="py-4 px-6 text-gray-700">High School (Class IX-XII)</td>
+                                <td class="py-4 px-6 text-center font-medium text-orange-600">₹40,000</td>
+                                <td class="py-4 px-6 text-center font-medium text-orange-600">₹2,20,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-6 text-center text-sm text-gray-600">
+                    <p>* Fees include tuition, books, uniforms, and extracurricular activities</p>
+                    <p>* Transportation and meals are available at additional cost</p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <div class="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4 font-serif">Need Help with Admissions?</h3>
+                    <p class="text-lg mb-6">Our admission counselors are here to guide you through the process</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="px-6 py-3 bg-white text-orange-600 font-semibold rounded-full hover:bg-orange-50 transition-colors">
+                            Schedule a Visit
+                        </button>
+                        <button class="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-orange-600 transition-colors">
+                            Call Us Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-serif">
+                    Our Distinguished Faculty
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Experienced educators dedicated to nurturing young minds with wisdom and care
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="users" class="h-6 w-6 text-white"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800 mb-2">85+</div>
+                    <div class="text-gray-600">Expert Faculty</div>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="award" class="h-6 w-6 text-white"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800 mb-2">15:1</div>
+                    <div class="text-gray-600">Student-Teacher Ratio</div>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="book-open" class="h-6 w-6 text-white"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800 mb-2">95%</div>
+                    <div class="text-gray-600">Advanced Degrees</div>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="star" class="h-6 w-6 text-white"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800 mb-2">20+</div>
+                    <div class="text-gray-600">Average Experience</div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="text-center mb-6">
+                        <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Dr. Priya Sharma" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Dr. Priya Sharma</h3>
+                        <p class="text-orange-600 font-medium mb-2">Principal & Sanskrit Scholar</p>
+                        <p class="text-sm text-gray-600 mb-1">Ph.D. in Sanskrit Literature</p>
+                        <p class="text-sm text-gray-500">25+ years Experience</p>
+                    </div>
+                    <div class="border-t pt-4">
+                        <p class="text-sm text-gray-600">
+                            <span class="font-medium">Specialization:</span> Vedic Studies, Educational Leadership
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="text-center mb-6">
+                        <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Prof. Rajesh Kumar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Prof. Rajesh Kumar</h3>
+                        <p class="text-orange-600 font-medium mb-2">Vice Principal & Mathematics Head</p>
+                        <p class="text-sm text-gray-600 mb-1">M.Sc. Mathematics, B.Ed.</p>
+                        <p class="text-sm text-gray-500">20+ years Experience</p>
+                    </div>
+                    <div class="border-t pt-4">
+                        <p class="text-sm text-gray-600">
+                            <span class="font-medium">Specialization:</span> Advanced Mathematics, Research
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="text-center mb-6">
+                        <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="https://images.pexels.com/photos/5212700/pexels-photo-5212700.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mrs. Anita Devi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Mrs. Anita Devi</h3>
+                        <p class="text-orange-600 font-medium mb-2">Primary Section Coordinator</p>
+                        <p class="text-sm text-gray-600 mb-1">M.A. Child Psychology</p>
+                        <p class="text-sm text-gray-500">18+ years Experience</p>
+                    </div>
+                    <div class="border-t pt-4">
+                        <p class="text-sm text-gray-600">
+                            <span class="font-medium">Specialization:</span> Early Childhood Education
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="text-center mb-6">
+                        <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="https://images.pexels.com/photos/5212329/pexels-photo-5212329.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Dr. Vikram Singh" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Dr. Vikram Singh</h3>
+                        <p class="text-orange-600 font-medium mb-2">Science Department Head</p>
+                        <p class="text-sm text-gray-600 mb-1">Ph.D. Physics, M.Ed.</p>
+                        <p class="text-sm text-gray-500">22+ years Experience</p>
+                    </div>
+                    <div class="border-t pt-4">
+                        <p class="text-sm text-gray-600">
+                            <span class="font-medium">Specialization:</span> Physics, Scientific Research
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="text-center mb-6">
+                        <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="https://images.pexels.com/photos/5212361/pexels-photo-5212361.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Ms. Kavita Joshi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Ms. Kavita Joshi</h3>
+                        <p class="text-orange-600 font-medium mb-2">Arts & Culture Coordinator</p>
+                        <p class="text-sm text-gray-600 mb-1">M.A. Fine Arts, Diploma in Dance</p>
+                        <p class="text-sm text-gray-500">15+ years Experience</p>
+                    </div>
+                    <div class="border-t pt-4">
+                        <p class="text-sm text-gray-600">
+                            <span class="font-medium">Specialization:</span> Classical Dance, Visual Arts
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="text-center mb-6">
+                        <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mr. Suresh Gupta" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Mr. Suresh Gupta</h3>
+                        <p class="text-orange-600 font-medium mb-2">Sports & Yoga Instructor</p>
+                        <p class="text-sm text-gray-600 mb-1">M.P.Ed., Yoga Certification</p>
+                        <p class="text-sm text-gray-500">12+ years Experience</p>
+                    </div>
+                    <div class="border-t pt-4">
+                        <p class="text-sm text-gray-600">
+                            <span class="font-medium">Specialization:</span> Physical Education, Yoga
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center font-serif">Faculty Development</h3>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="book-open" class="h-8 w-8 text-orange-600"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Continuous Learning</h4>
+                        <p class="text-gray-600 text-sm">
+                            Regular workshops and training programs to stay updated with latest educational methodologies
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="users" class="h-8 w-8 text-orange-600"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Collaborative Teaching</h4>
+                        <p class="text-gray-600 text-sm">
+                            Team-based approach to curriculum development and student mentorship
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="award" class="h-8 w-8 text-orange-600"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Recognition Programs</h4>
+                        <p class="text-gray-600 text-sm">
+                            Excellence awards and career advancement opportunities for outstanding performance
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <div class="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4 font-serif">Join Our Teaching Community</h3>
+                    <p class="text-lg mb-6">
+                        We're always looking for passionate educators who share our vision of holistic education
+                    </p>
+                    <button class="px-8 py-3 bg-white text-orange-600 font-semibold rounded-full hover:bg-orange-50 transition-colors">
+                        View Career Opportunities
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Section -->
+    <section id="campus" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-serif">
+                    Our Campus
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A nurturing environment designed for holistic learning and development
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-20">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="absolute inset-0">
+                        <img src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Modern Classrooms" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    </div>
+                    <div class="relative p-8 h-80 flex flex-col justify-end">
+                        <div class="mb-4">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mb-4">
+                                <i data-lucide="building" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Modern Classrooms</h3>
+                            <p class="text-gray-200 leading-relaxed">Smart boards, air-conditioned rooms with natural lighting</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="absolute inset-0">
+                        <img src="https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Green Campus" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    </div>
+                    <div class="relative p-8 h-80 flex flex-col justify-end">
+                        <div class="mb-4">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mb-4">
+                                <i data-lucide="tree-pine" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Green Campus</h3>
+                            <p class="text-gray-200 leading-relaxed">Eco-friendly environment with gardens and open spaces</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="absolute inset-0">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nutritious Meals" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    </div>
+                    <div class="relative p-8 h-80 flex flex-col justify-end">
+                        <div class="mb-4">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mb-4">
+                                <i data-lucide="utensils" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Nutritious Meals</h3>
+                            <p class="text-gray-200 leading-relaxed">Hygienic cafeteria serving healthy, balanced meals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="absolute inset-0">
+                        <img src="https://images.pexels.com/photos/159213/kids-school-happy-children-159213.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Safe Transportation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    </div>
+                    <div class="relative p-8 h-80 flex flex-col justify-end">
+                        <div class="mb-4">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mb-4">
+                                <i data-lucide="bus" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Safe Transportation</h3>
+                            <p class="text-gray-200 leading-relaxed">GPS-enabled buses with trained drivers and attendants</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-2xl p-8 mb-16">
+                <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center font-serif">Campus Amenities</h3>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="building" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Science Laboratories</h4>
+                        <p class="text-gray-600 text-sm">Well-equipped labs for Physics, Chemistry, and Biology</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="tree-pine" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Sports Complex</h4>
+                        <p class="text-gray-600 text-sm">Indoor and outdoor sports facilities with professional equipment</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="book-open" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Library & Reading Room</h4>
+                        <p class="text-gray-600 text-sm">Extensive collection of books and digital resources</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="heart" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Medical Room</h4>
+                        <p class="text-gray-600 text-sm">24/7 medical assistance with qualified nursing staff</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="wifi" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Digital Infrastructure</h4>
+                        <p class="text-gray-600 text-sm">High-speed internet and modern IT facilities</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="shield" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Security System</h4>
+                        <p class="text-gray-600 text-sm">CCTV surveillance and trained security personnel</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6 font-serif">Campus Highlights</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <p class="text-gray-600">15-acre sprawling campus with lush green surroundings</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <p class="text-gray-600">State-of-the-art infrastructure with modern amenities</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <p class="text-gray-600">Dedicated spaces for yoga, meditation, and spiritual practices</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <p class="text-gray-600">Organic garden maintained by students for practical learning</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <p class="text-gray-600">Amphitheater for cultural programs and assemblies</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <p class="text-gray-600">Separate hostels for boys and girls with homely atmosphere</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Campus overview" class="rounded-2xl shadow-lg">
+                    <div class="absolute -bottom-6 -left-6 w-full h-full bg-gradient-to-r from-orange-200 to-red-200 rounded-2xl -z-10"></div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <div class="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4 font-serif">Visit Our Campus</h3>
+                    <p class="text-lg mb-6">
+                        Experience our learning environment firsthand. Schedule a campus tour today!
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="px-6 py-3 bg-white text-orange-600 font-semibold rounded-full hover:bg-orange-50 transition-colors">
+                            Book Campus Tour
+                        </button>
+                        <button class="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-orange-600 transition-colors">
+                            Virtual Tour
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-serif">
+                    School Events
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Celebrating learning, culture, and community through engaging activities and programs
+                </p>
+            </div>
+
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center font-serif">Upcoming Events</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Annual Cultural Festival" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 bg-orange-500 text-white text-xs font-semibold rounded-full">Cultural</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-3">Annual Cultural Festival - Sanskruti</h4>
+                            <p class="text-gray-600 mb-4">Three-day celebration of Indian culture with dance, music, and drama performances</p>
+                            <div class="space-y-2 text-sm text-gray-500">
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="calendar" class="h-4 w-4 text-orange-500"></i>
+                                    <span>March 15-17, 2025</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="clock" class="h-4 w-4 text-orange-500"></i>
+                                    <span>9:00 AM - 6:00 PM</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="map-pin" class="h-4 w-4 text-orange-500"></i>
+                                    <span>Main Auditorium</span>
+                                </div>
+                            </div>
+                            <button class="mt-4 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors duration-300">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.pexels.com/photos/8471691/pexels-photo-8471691.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Science Exhibition" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 bg-orange-500 text-white text-xs font-semibold rounded-full">Academic</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-3">Science Exhibition & Innovation Fair</h4>
+                            <p class="text-gray-600 mb-4">Students showcase their scientific projects and innovative solutions</p>
+                            <div class="space-y-2 text-sm text-gray-500">
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="calendar" class="h-4 w-4 text-orange-500"></i>
+                                    <span>April 5, 2025</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="clock" class="h-4 w-4 text-orange-500"></i>
+                                    <span>10:00 AM - 4:00 PM</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="map-pin" class="h-4 w-4 text-orange-500"></i>
+                                    <span>Science Block</span>
+                                </div>
+                            </div>
+                            <button class="mt-4 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors duration-300">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Yoga Workshop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 bg-orange-500 text-white text-xs font-semibold rounded-full">Wellness</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-3">Yoga & Wellness Workshop</h4>
+                            <p class="text-gray-600 mb-4">Special session on traditional yoga practices and meditation techniques</p>
+                            <div class="space-y-2 text-sm text-gray-500">
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="calendar" class="h-4 w-4 text-orange-500"></i>
+                                    <span>April 20, 2025</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="clock" class="h-4 w-4 text-orange-500"></i>
+                                    <span>6:00 AM - 8:00 AM</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="map-pin" class="h-4 w-4 text-orange-500"></i>
+                                    <span>Yoga Hall</span>
+                                </div>
+                            </div>
+                            <button class="mt-4 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors duration-300">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.pexels.com/photos/159740/football-capture-ball-sport-159740.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sports Championship" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 bg-orange-500 text-white text-xs font-semibold rounded-full">Sports</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-3">Inter-School Sports Championship</h4>
+                            <p class="text-gray-600 mb-4">Annual sports meet with various indoor and outdoor competitions</p>
+                            <div class="space-y-2 text-sm text-gray-500">
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="calendar" class="h-4 w-4 text-orange-500"></i>
+                                    <span>May 10-12, 2025</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="clock" class="h-4 w-4 text-orange-500"></i>
+                                    <span>8:00 AM - 5:00 PM</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="map-pin" class="h-4 w-4 text-orange-500"></i>
+                                    <span>Sports Complex</span>
+                                </div>
+                            </div>
+                            <button class="mt-4 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors duration-300">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center font-serif">Recent Highlights</h3>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                        <div class="h-40 overflow-hidden">
+                            <img src="https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Diwali Celebration" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">Diwali Celebration 2024</h4>
+                            <p class="text-gray-600 text-sm">Traditional festival celebration with rangoli, diyas, and cultural programs</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                        <div class="h-40 overflow-hidden">
+                            <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Annual Day" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">Annual Day 2024</h4>
+                            <p class="text-gray-600 text-sm">Grand celebration showcasing student talents and achievements</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                        <div class="h-40 overflow-hidden">
+                            <img src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Teacher's Day" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">Teacher's Day Special</h4>
+                            <p class="text-gray-600 text-sm">Honoring our dedicated faculty with special performances and gratitude</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center font-serif">Annual Calendar</h3>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center p-4 bg-orange-50 rounded-xl">
+                        <div class="text-2xl font-bold text-orange-600 mb-2">April</div>
+                        <div class="text-sm text-gray-600">New Academic Session, Admission Process</div>
+                    </div>
+                    <div class="text-center p-4 bg-green-50 rounded-xl">
+                        <div class="text-2xl font-bold text-green-600 mb-2">July</div>
+                        <div class="text-sm text-gray-600">Monsoon Festival, Environmental Week</div>
+                    </div>
+                    <div class="text-center p-4 bg-blue-50 rounded-xl">
+                        <div class="text-2xl font-bold text-blue-600 mb-2">October</div>
+                        <div class="text-sm text-gray-600">Diwali Celebration, Cultural Programs</div>
+                    </div>
+                    <div class="text-center p-4 bg-purple-50 rounded-xl">
+                        <div class="text-2xl font-bold text-purple-600 mb-2">February</div>
+                        <div class="text-sm text-gray-600">Annual Day, Sports Meet, Graduation</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <div class="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4 font-serif">Stay Updated</h3>
+                    <p class="text-lg mb-6">
+                        Never miss an event! Subscribe to our newsletter for the latest updates
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-300">
+                        <button class="px-6 py-3 bg-white text-orange-600 font-semibold rounded-lg hover:bg-orange-50 transition-colors">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-serif">
+                    Contact Us
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We're here to help you with any questions about admissions, academics, or school life
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-8 font-serif">Get in Touch</h3>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Address</h4>
+                                <p class="text-gray-600">
+                                    123 Vedic Wisdom Lane<br>
+                                    Knowledge Park, Education City<br>
+                                    New Delhi - 110001, India
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Phone Numbers</h4>
+                                <p class="text-gray-600">
+                                    Main Office: +91 98765 43210<br>
+                                    Admissions: +91 98765 43211<br>
+                                    Principal: +91 98765 43212
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Email Addresses</h4>
+                                <p class="text-gray-600">
+                                    General: info@vedicschool.edu<br>
+                                    Admissions: admissions@vedicschool.edu<br>
+                                    Principal: principal@vedicschool.edu
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="clock" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Office Hours</h4>
+                                <p class="text-gray-600">
+                                    Monday - Friday: 8:00 AM - 5:00 PM<br>
+                                    Saturday: 9:00 AM - 2:00 PM<br>
+                                    Sunday: Closed
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
+                        <h4 class="font-semibold text-gray-800 mb-3">Quick Contact</h4>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <button class="flex items-center justify-center space-x-2 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors">
+                                <i data-lucide="phone" class="h-4 w-4"></i>
+                                <span>Call Now</span>
+                            </button>
+                            <button class="flex items-center justify-center space-x-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors">
+                                <i data-lucide="message-circle" class="h-4 w-4"></i>
+                                <span>WhatsApp</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-gray-50 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 font-serif">Send us a Message</h3>
+                        
+                        <form class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        First Name *
+                                    </label>
+                                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Enter your first name">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Last Name *
+                                    </label>
+                                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Enter your last name">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Email Address *
+                                </label>
+                                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Enter your email address">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Phone Number
+                                </label>
+                                <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Enter your phone number">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Subject *
+                                </label>
+                                <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                    <option value="">Select a subject</option>
+                                    <option value="admissions">Admissions Inquiry</option>
+                                    <option value="academics">Academic Information</option>
+                                    <option value="facilities">Campus Facilities</option>
+                                    <option value="fees">Fee Structure</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Message *
+                                </label>
+                                <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none" placeholder="Enter your message here..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
+                                <i data-lucide="send" class="h-5 w-5"></i>
+                                <span>Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16">
+                <div class="bg-gray-100 rounded-2xl p-4 h-96">
+                    <div class="w-full h-full bg-gray-300 rounded-xl flex items-center justify-center">
+                        <div class="text-center text-gray-600">
+                            <i data-lucide="map-pin" class="h-12 w-12 mx-auto mb-4"></i>
+                            <p class="text-lg font-medium">Interactive Map</p>
+                            <p class="text-sm">School location and directions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <div class="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4 font-serif">Visit Our Campus</h3>
+                    <p class="text-lg mb-6">
+                        Experience our learning environment firsthand. We welcome prospective families to visit our campus
+                    </p>
+                    <button class="px-8 py-3 bg-white text-orange-600 font-semibold rounded-full hover:bg-orange-50 transition-colors">
+                        Schedule a Campus Tour
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <div>
+                            <span class="text-xl font-bold">Vedic Wisdom School</span>
+                            <p class="text-xs text-gray-400">विद्या ददाति विनयम्</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Nurturing young minds with ancient wisdom and modern education for holistic development and character building.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i data-lucide="facebook" class="h-4 w-4"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i data-lucide="twitter" class="h-4 w-4"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i data-lucide="instagram" class="h-4 w-4"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i data-lucide="youtube" class="h-4 w-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4 text-orange-300">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="text-gray-400 hover:text-orange-300 transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-orange-300 transition-colors">About Us</a></li>
+                        <li><a href="#academics" class="text-gray-400 hover:text-orange-300 transition-colors">Academics</a></li>
+                        <li><a href="#admissions" class="text-gray-400 hover:text-orange-300 transition-colors">Admissions</a></li>
+                        <li><a href="#faculty" class="text-gray-400 hover:text-orange-300 transition-colors">Faculty</a></li>
+                        <li><a href="#campus" class="text-gray-400 hover:text-orange-300 transition-colors">Campus</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4 text-orange-300">Academics</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-orange-300 transition-colors">Pre-Primary</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-300 transition-colors">Primary School</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-300 transition-colors">Middle School</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-300 transition-colors">High School</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-300 transition-colors">Curriculum</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-300 transition-colors">Results</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4 text-orange-300">Contact Info</h4>
+                    <div class="space-y-3 text-sm text-gray-400">
+                        <p>📍 123 Vedic Wisdom Lane<br>Knowledge Park, New Delhi</p>
+                        <p>📞 +91 98765 43210</p>
+                        <p>📧 info@vedicschool.edu</p>
+                        <p>🕒 Mon-Fri: 8:00 AM - 5:00 PM<br>Sat: 9:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        © 2025 Vedic Wisdom School. All rights reserved. | Nurturing minds, building character.
+                    </p>
+                    <div class="flex items-center space-x-2 text-sm text-gray-400">
+                        <span>Made with</span>
+                        <i data-lucide="heart" class="h-4 w-4 text-red-500"></i>
+                        <span>for future leaders</span>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-6 pt-6 border-t border-gray-800">
+                    <p class="text-orange-300 font-medium text-lg">
+                        सा विद्या या विमुक्तये
+                    </p>
+                    <p class="text-gray-400 text-sm mt-1">
+                        True education is that which liberates
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
